@@ -1,0 +1,22 @@
+div{
+    margin-bottom: 10px;
+}
+
+.one-line{
+    width: 400px;
+    height:20px;
+    border: 1px solid lightgrey;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.max-three-lines{
+    width: 400px;
+    height: 55px;
+    border: 1px solid lightgrey;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}

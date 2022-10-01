@@ -1,0 +1,49 @@
+#wrapper{
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    "systems systems systems . ml ml"
+    ". algo algo algo algo ."
+    "frontend frontend prog prog prog prog";
+    grid-template-columns: 12.5fr 27.5fr 10fr 20fr 17.5fr 12.5fr;
+    row-gap: 24px;
+}
+
+#algo-expert {
+    grid-area: algo;
+    background-color: #626ee3;
+}
+
+#systems-expert {
+    margin: auto 0 auto 0;
+    grid-area: systems;
+    background-color: #890023;
+}
+
+#ml-expert {
+    grid-area: ml;
+    height:75px;
+    background-color: #f37f1b;
+}
+
+#frontend-expert {
+    margin-top: auto;
+    grid-area: frontend;
+    background-color: #11967e;
+}
+
+#programming-expert {
+    height:75px;
+    grid-area: prog;
+    background-color: #f21b3f;
+    margin-left: 10px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+}

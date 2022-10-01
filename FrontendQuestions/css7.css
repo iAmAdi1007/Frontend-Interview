@@ -1,0 +1,67 @@
+#wrapper{
+    width:280px;
+    padding:10px;
+    border-radius: 10px;
+    background-color: lightgrey;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+    margin: 0 0 10px 0;
+}
+
+#notifications{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.notification{
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    display:grid;
+    grid-template-areas:
+    "avatar comment"
+    "avatar timestamp";
+    gap:10px;
+}
+
+img{
+    grid-area: avatar;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+p{
+    grid-area: comment;
+    margin-top:0;
+}
+
+.user{
+    font-weight: bold;
+}
+
+.time{
+    grid-area: timestamp;
+    position: absolute;
+    font-weight: normal;
+    align-self: end;
+    justify-self: end;
+    font-size: 12px;
+    font-style: italic;
+}
+
+button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #02203c;
+    color: white;
+}
+

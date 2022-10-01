@@ -1,0 +1,40 @@
+#wrapper{
+    background-color: #02203c;
+    display: flex;
+    align-items: center;
+    gap:50px;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-left: 50px;
+}
+
+#logo::before, #logo::after{
+    content:"";
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+#logo::before{
+    transform: rotate(45deg);
+}
+
+#logo::after{
+    transform: rotate(-45deg);
+}
+
+h1{
+    color:white;
+    font-size: 48px;
+    font-family: monospace;
+}
