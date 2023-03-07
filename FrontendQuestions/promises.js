@@ -1,8 +1,18 @@
-class MyPromise {
-  // Write your code here.
 
+const STATE = {
+  PENDING: "pending",
+  FULFILLED: "fulfilled",
+  REJECTED: "rejected"
+};
+class MyPromise {
+  #state = STATE.PENDING;
+  #value = null;
   constructor(executorFunc) {
-    // Write your code here.
+    try {
+      executorFunc(value => this.#resolve(value), value => this.#reject(value));
+    } catch (error) {
+      this.#reject(error);
+    }
   }
 
   then(onFulfilled, onRejected) {
@@ -14,11 +24,21 @@ class MyPromise {
   }
 
   get state() {
-    // Write your code here.
+    return this.#state;
   }
 
   get value() {
-    // Write your code here.
+    return this.#value;
+  }
+
+  #resolve(value){
+    this.state = STATE.FULFILLED;
+    this.#value = value;
+  }
+
+  #reject(value){
+    this.state = STATE.REJECTED;
+    this.#value = value;
   }
 }
 
